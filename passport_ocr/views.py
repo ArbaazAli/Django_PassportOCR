@@ -7,7 +7,7 @@ import pyexcel
 from passporteye import read_mrz
 import pytesseract
 from pytesseract import Output
-pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
 
 states = ['Andhra Pradesh', 'Hyderabad', 'Arunachal Pradesh', 'Itanagar', 'Assam', 'Dispur', 'Bihar', 'Patna', 'Chhattisgarh', 'Raipur',\
