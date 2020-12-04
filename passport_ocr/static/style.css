@@ -1,0 +1,25 @@
+body{
+    font-family: 'Karla', sans-serif;
+    background-image: url("https://images.pexels.com/photos/346798/pexels-photo-346798.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #F3616B ;
+    font-weight: bolder;
+}
+
+p{
+    font-weight: bolder;
+    font-size: 20px;
+    color: #009BED;
+}
+
+p.h1{
+    color: #F3616B;
+    font-weight: bolder;
+}
+
+.btn.btn-info{
+    background: #F3616B;
+    border: #F3616B;
+}
