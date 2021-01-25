@@ -15,7 +15,7 @@
     <div class="container">
         <p class="h1 d-flex justify-content-center">PASSPORT OCR</p>
         <div class="d-flex justify-content-center align-items-center mt-5">            
-            <form class=""  method="POST" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <!-- Card -->
                 <div class="card">
@@ -43,6 +43,7 @@
                             {{ error }}
                         </div>
                         {% endif %}
+                    </div>
                 </div>
             </form> 
         </div>

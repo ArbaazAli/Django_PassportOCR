@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <title>Passport OCR</title>
+</head>
+<body>
+    <div class="container">
+        <p class="h1 d-flex justify-content-center">PASSPORT FORM</p>
+        <div class="d-flex justify-content-center align-items-center mt-5">
+            <form action="{% url 'form' %}"  method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                     <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                                  <label for="given_name">Given Name</label>
+                                  <input type="text" class="form-control" name="given_name" id="given_name" value="{{ Given_name }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="surname">Surname</label>
+                              <input type="text" class="form-control" name="surname" id="surname" value="{{ Surname }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="date_of_birth">Date Of Birth</label>
+                              <input type="text" class="form-control" name="date_of_birth" id="date_of_birth" value="{{ Date_of_Birth }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="place_of_birth">Place Of Birth</label>
+                              <input type="text" class="form-control" name="place_of_birth" id="place_of_birth" value="{{ Place_of_Birth }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="sex">Sex</label>
+                              <input type="text" class="form-control" name="sex" id="sex" value="{{ Sex }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="nationality">Nationality</label>
+                              <input type="text" class="form-control" name="nationality" id="nationality" value="{{ Nationality }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="passport_number">Passport Number</label>
+                              <input type="text" class="form-control" name="passport_number" id="passport_number" value="{{ Passport_number }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="passport_type">Passport Type</label>
+                              <input type="text" class="form-control" name="passport_type" id="passport_type" value="{{ Passport_type }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="place_of_issue">Place Of Issue</label>
+                              <input type="text" class="form-control" name="place_of_issue" id="place_of_issue" value="{{ Place_of_Issue }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="expiration_date">Expiration Date</label>
+                              <input type="text" class="form-control" name="expiration_date" id="expiration_date" value="{{ Expiration_Date }}">
+                            </div>
+                          </div>
+                          <!--  col-md-6   -->
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <textarea placeholder="Enter Address" name="address" id="address" cols="50" required></textarea>
+                        </div>
+                    </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
